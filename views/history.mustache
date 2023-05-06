@@ -1,0 +1,100 @@
+<html>
+    {{>head}}
+    <body>
+
+        {{>header}}
+
+        <main>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-8 offset-sm-2">
+
+                        <h2 class="text-center">Your achieved goals<h2>
+                        
+                        <h3>Nutrition<h3>
+                        <ul>
+                            {{#nutrition}}
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>{{description}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-end">Achieved on {{achieved_date}}</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            {{/nutrition}}
+                            {{^nutrition}}
+                                <p> No goal for this category yet</p>
+                            {{/nutrition}}
+                        </ul>
+
+                        <hr>
+
+                        <h3>Fitness<h3>
+                        <ul>
+                            {{#fitness}}
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>{{description}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-end">Achieved on {{achieved_date}}</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            {{/fitness}}
+                            {{^fitness}}
+                                <p> No goal for this category yet</p>
+                            {{/fitness}}
+                        </ul>
+
+                        <hr>
+
+                        <h3>Lifestyle<h3>
+                        <ul>
+                            {{#lifestyle}}
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>{{description}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-end">Achieved on {{achieved_date}}</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            {{/lifestyle}}
+                            {{^lifestyle}}
+                                <p> No goal for this category yet</p>
+                            {{/lifestyle}}
+                        </ul>
+
+                        <hr>
+
+                        <div class="row my-sm-4">
+                            <div class="col text-center">
+                                <a href="/profile/{{user}}" role="button" class="btn btn-secondary">Back to profile</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+
+    </body>
+</html>

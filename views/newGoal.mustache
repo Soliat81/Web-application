@@ -1,0 +1,51 @@
+<html>
+    {{>head}}
+    <body>
+
+        {{>header}}
+
+        <main class="container">
+
+            {{#errors}}
+
+                <div class="alert alert-danger" role="alert">
+                    {{msg}}
+                </div>
+            {{/errors}}
+            
+
+            <h1 class="text-center">Let's add a goal</h1>
+
+            <form method="post" role="form">
+                <div class="row">
+                    <div class="col-4 offset-md-4">
+                        <div class="form-group my-sm-2">
+                            <label for="category">Category:</label>
+                            <select name="category" id="category" class="form-control">
+                                <option value="Nutrition">Nutrition</option>
+                                <option value="Fitness">Fitness</option>
+                                <option value="Lifestyle">Lifestyle</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group my-sm-2">
+                            <label for="description">Goal description</label>
+                            <textarea id="description" name="description" placeholder="e.g: Do 5 push ups each days for a mounth" class="form-control" required></textarea>
+                        </div>
+                        
+                        <div class="row my-sm-2">
+                            <div class="col text-center">
+                                <input type="submit" value="Add" class="btn btn-primary btn-lg btn-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+        
+        </main>
+
+
+    </body>
+<html>

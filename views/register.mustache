@@ -1,0 +1,56 @@
+<html>
+    {{>head}}
+    <body>
+
+        <main class="container">
+
+            <h1 class="text-center">Register now to access the app</h1>
+
+            {{#errors}}
+
+                <div class="alert alert-danger" role="alert">
+                    {{msg}}
+                </div>
+            {{/errors}}
+            
+
+            <form method="post" action="/register">
+                <div class="row align-items-center">
+                    <div class="col-4 offset-md-4">
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input class="form-control" type="text" name="username" id="username" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="password">Password (7 characters minimum)</label>
+                            <input class="form-control" type="password" name="password" id="password" minlenght="7" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpassword">Confirm password</label>
+                            <input class="form-control" type="password" name="cpassword" id="cpassword" minlenght="7" required>
+                        </div>
+
+
+                        <div class="row my-sm-2">
+                            <div class="col text-center">
+                                <input class="btn btn-primary" type="submit" value="Create account">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="row">
+                <div class="col-sm-3 offset-sm-4">
+                    <p>Already got an account ? <a href="/login">Log in</a></p>
+                </div>
+            </div>
+
+        </main>
+
+    </body>
+</html>

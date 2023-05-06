@@ -1,0 +1,30 @@
+<html>
+    {{>head}}
+    <body>
+
+        {{>header}}
+
+        <main class="container mt-2">
+
+            <div class="clearfix">
+
+                {{#Article}}
+
+                    <h1 class="text-center my-sm-3">{{title}}</h1>
+
+                    <img src="{{illustration}}" alt="{{title}}" class="col-md-6 float-md-start m-sm-3">
+
+                    {{{content}}}
+
+                {{/Article}}
+
+                {{^Article}}
+                    <h1>It seems the article you're looking for does not exist</h1>
+                {{/Article}}
+            </div>
+            
+        </main>
+
+
+    </body>
+</html>
